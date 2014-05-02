@@ -66,7 +66,7 @@ foreach $act (@{$revue->{acts}}) {
 	foreach $material (@{$act->{materials}}) {
 		print "\n".'\titel{'. $material->{title} .'}'."\n";
 		foreach $prop (@{$material->{props}}) {
-			print '\textbf{'. $prop->{name} .'} & '. $prop->{responsible} .' & \\\\ '. $prop->{description} .' & & \\\\ \hline'. "\n";
+			print $prop->{name} .' & '. $prop->{responsible} .' & \\\\ '. $prop->{description} .' & & \\\\ \hline'. "\n";
 		}
 	}
 
