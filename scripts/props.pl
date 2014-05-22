@@ -19,6 +19,7 @@ my $revue = decode_json(File::Slurp::read_file($ARGV[0]));
 my $act;
 my $material;
 my $prop;
+my $role;
 
 print '
 \documentclass[a4paper,11pt,oneside]{article}
@@ -64,7 +65,13 @@ foreach $act (@{$revue->{acts}}) {
 	print '\hline \endfoot'."\n";
 
 	foreach $material (@{$act->{materials}}) {
-		print "\n".'\titel{'. $material->{title} .'}'."\n";
+                my $director = "?";
+                foreach $role (@{$material->{roles}}) {
+                        if ($role->{abbr} eq "X") {
+                            $director = $role->{actor};
+                        }
+		}
+		print "\n".'\titel{'. $material->{title} . ' (\\textit{' . $director .'})}'."\n";
 		foreach $prop (@{$material->{props}}) {
 			print $prop->{name} .' & '. $prop->{responsible} .' & \\\\ '. $prop->{description} .' & & \\\\ \hline'. "\n";
 		}
