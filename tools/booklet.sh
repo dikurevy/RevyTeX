@@ -19,7 +19,7 @@ do
 	if (( i % 2 == 0)); then
 		args="$args $s1 $s2"
 	else
-		args="$args ${s1}S ${s2}S"
+		args="$args ${s1}south ${s2}south"
 	fi
 done
 
