@@ -67,7 +67,10 @@ $(json) : $(plan) $(datadeps) $(scriptdir)/data.pl
 	@mkdir -p $(outputdir) $(individualdir)
 	@echo -n "Parsing material data: "
 	@$(scriptdir)/data.pl .config.json $(plan) > $(json)
+	@echo -n "var data = " > "$(json)2.js"
+	@cat $(json) >> "$(json)2.js"
 	@chmod 664 $(json)
+	@chmod 664 "$(json)2.js"
 	@echo "OK"
 	@echo ""
 
