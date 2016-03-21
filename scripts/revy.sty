@@ -276,7 +276,7 @@
 \def\@sings#1{\rm\item [\hskip\@leftsingpad{\bf #1\,}:\hskip
   \@rightsingpad]\hskip-\songhangindent}
 
-\def\sings#1{\@ifnextchar [{\@singsas{#1}}{\@sings{#1}}}
+\def\sings#1{{\@ifnextchar [{\@singsas{#1}}{\@sings{#1}}}}
 
 % Dirty stuff
 % \obeycr = make carriage returns into linebreaks,
