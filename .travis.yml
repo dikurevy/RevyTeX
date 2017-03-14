@@ -9,5 +9,5 @@ addons:
             - texlive
             - texlive-latex-extra
 install:
-    - "cpanm --quiet --notest Data::Dumper File::Slurp Getopt::Long JSON::XS Makefile::Parser PDF::API2::Util PDF::Reuse Text::vCard Text::vCard::Addressbook"
+    - "cpanm --quiet --notest Data::Dumper File::Slurp Getopt::Long JSON JSON::XS Makefile::Parser PDF::API2::Util PDF::Reuse Text::vCard Text::vCard::Addressbook utf8::all"
 script: "prove -v test"
