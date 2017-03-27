@@ -1,0 +1,10 @@
+requires "File::Slurp";
+requires "Getopt::Long";
+requires "JSON";
+requires "JSON::XS";
+requires "Makefile::Parser";
+requires "PDF::API2::Util";
+requires "PDF::Reuse";
+requires "Text::vCard";
+requires "Text::vCard::Addressbook";
+requires "utf8::all";

@@ -2,9 +2,16 @@
 
 LaTeX environment and scripts for the science revues at University of Copenhagen.
 
-## Requirements
+## Installation
 
-See .travis.yml for a list of required Ubuntu packages and perl modules.
+RevyTeX requires Perl and a latex distribution.
+
+To install the required perl packages, execute the following commands:
+
+```
+sudo cpan -i App::cpanminus
+sudo cpanm --notest --installdeps .
+```
 
 ## Usage
 
