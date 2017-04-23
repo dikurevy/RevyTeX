@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
-use strict;
+use 5.012;
 use warnings;
+use utf8::all;
 use POSIX;
 
 use Makefile::Parser;
