@@ -73,10 +73,11 @@ foreach (<FH>) {
 			$material{author} = $1 if (m/\\author\{(.*)\}/);
 
 			push @{$material{roles}}, {
-				title => $3,
-				abbr => $1,
-				actor => $2
-			} if (m/\\role\{(.*?)}\[(.*?)\]\s*(.*?)\s*$/);
+				title => $4,
+				abbr => $2,
+				actor => $3,
+				type => $1,
+			} if (m/\\(role|ninja|extra)\{(.*?)}\[(.*?)\]\s*(.*?)\s*$/);
 
 			push @{$material{props}}, {
 				name => $1,
