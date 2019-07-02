@@ -8,6 +8,7 @@ addons:
         packages:
             - texlive
             - texlive-latex-extra
+            - texlive-lang-european
 install:
     - "cpanm --quiet --notest --installdeps ."
 script: "prove -v test"
