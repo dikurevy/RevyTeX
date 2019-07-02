@@ -15,7 +15,7 @@ sub execute {
     return;
 }
 
-execute('echo "TestRevy\n2016\n" | make ../make_pdf');
+execute('echo -e "TestRevy\n2020" | make ../make_pdf');
 chdir('../make_pdf');
 
 for my $dir (qw(sange sketches video)) {

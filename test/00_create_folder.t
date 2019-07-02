@@ -16,8 +16,8 @@ sub execute {
     return;
 }
 
-execute('echo "TestRevy\n2016\n" | make ../create_folder');
-chdir('../create_folder');
+execute('echo -e "TestRevy\n2020" | make ../make_manus');
+chdir('../make_manus');
 
 ok(-l 'Makefile' && -f 'Makefile', 'makefile in root exists and is symlink');
 ok(-l 'revy.sty' && -f 'revy.sty', 'revy.sty in root exists and is symlink');
@@ -39,6 +39,6 @@ for my $dir (qw(sange sketches video)) {
 }
 
 chdir('../RevyTeX');
-execute('rm -rf ../create_folder');
+execute('rm -rf ../make_manus');
 
 done_testing($tests);

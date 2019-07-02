@@ -15,7 +15,7 @@ sub execute {
     return;
 }
 
-execute('echo "TestRevy\n2016\n" | make ../make_manus');
+execute('echo -e "TestRevy\n2020" | make ../make_manus');
 chdir('../make_manus');
 
 open(my $f, '>', 'aktoversigt.plan');

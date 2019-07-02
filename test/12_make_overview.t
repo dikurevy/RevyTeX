@@ -15,7 +15,7 @@ sub execute {
     return;
 }
 
-execute('echo "TestRevy\n2016\n" | make ../make_manus');
+execute('echo -e "TestRevy\n2020" | make ../make_manus');
 chdir('../make_manus');
 
 execute('make aktoversigt.plan');
@@ -30,23 +30,23 @@ my $expected = <<EOF;
 
 ## Titel (Kunstner - Originaltitel)
 * Filnavn: sange/skabelon.tex
-* Forfattere: Forfatter
-* Status: Ikke faerdig
+* Forfattere: Forfattere
+* Status: Ikke færdig
 * Version: 0.1
 
 # Sketches
 
-## Her skal sketchens titel stå
+## Titel
 * Filnavn: sketches/skabelon.tex
-* Forfattere: en forfatter
+* Forfattere: Forfattere
 * Status: Ikke færdig
 * Version: 0.1
 
 # Video
 
-## Her skal sketchens titel stå
+## Titel
 * Filnavn: video/skabelon.tex
-* Forfattere: en forfatter
+* Forfattere: Forfattere
 * Status: Ikke færdig
 * Version: 0.1
 
